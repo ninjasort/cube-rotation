@@ -15,7 +15,7 @@ $cube-size: 300px;
 .cube-container {
   position: relative;
   width: $cube-size;
-  height: $cube-size;
+  height: $cube-size*1.5;
   margin: 0 auto;
   perspective: 1000px;
   .cube {
@@ -31,6 +31,8 @@ $cube-size: 300px;
       position: absolute;
       width: 100%;
       height: 100%;
+      background-image: url('../images/1.jpg');
+      background-size: cover;
     }
     .offset {
       position: absolute;
@@ -51,17 +53,33 @@ $cube-size: 300px;
     .right {
       transform: rotateY(90deg) translateZ($cube-size*0.5);
     }
-    .top {
-      transform: rotateX(90deg) translateZ($cube-size*0.5);
-    }
-    .bottom {
-      transform: rotateX(-90deg) translateZ($cube-size*0.5);
-    }
     .front-hover {
-      transform: rotateY(0deg) translateZ($cube-size*0.8) translate(50%, 50%);
-      background-color: red;
-      width: 50%;
-      height: 50%;
+      transform: rotateY(0deg) translateZ($cube-size*0.8) translate(0, 0);
+      background-image: url('../images/obj_2.png');
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .left-hover {
+      transform: rotateY(-90deg) translateZ($cube-size*0.6) translate(0, 0);
+      background-image: url('../images/obj_1.png');
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .right-hover {
+      transform: rotateY(90deg) translateZ($cube-size*0.6) translate(0, 0);
+      background-image: url('../images/obj_3.png');
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .arrows {
+      transform: rotateY(0deg) translateZ($cube-size*0.7) translate(0,250%);
+      background-image: url('../images/side-to-side-arrows.svg');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
     }
   }
 }

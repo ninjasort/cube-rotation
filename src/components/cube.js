@@ -34,6 +34,9 @@ class Cube extends Component {
             )
           })}
           <figure className="front-hover"></figure>
+          <figure className="left-hover"></figure>
+          <figure className="right-hover"></figure>
+          <figure className="arrows"></figure>
         </figure>
       </section>
     )
